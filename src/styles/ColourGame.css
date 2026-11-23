@@ -1,0 +1,71 @@
+.colour-game-page {
+  min-height: 100vh;
+  background: #fff5f8;
+  font-family: 'Trebuchet MS', Arial, sans-serif;
+  color: #29465c;
+  padding-bottom: 50px;
+}
+
+.colour-display {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  margin: 15px auto 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 5px solid white;
+  transition: transform 0.3s;
+}
+
+.colour-display:hover {
+  transform: scale(1.05);
+}
+
+.colour-emoji {
+  font-size: 55px;
+}
+
+.question-speak-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.speech-btn {
+  background: #eef6fc;
+  border: none;
+  border-radius: 50%;
+  width: 38px;
+  height: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: #3196c6;
+  transition: 0.2s;
+}
+
+.speech-btn:hover {
+  background: #3196c6;
+  color: white;
+  transform: scale(1.1);
+}
+
+.option-swatch {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  margin-right: 8px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  vertical-align: middle;
+}
+
+.saved-status-text {
+  color: #2e7d32;
+  font-weight: bold;
+  font-size: 14px;
+  margin: 10px 0;
+}

@@ -1,0 +1,345 @@
+{
+  "info": {
+    "_postman_id": "little-learners-api-collection-2026",
+    "name": "Little Learners MERN API Collection",
+    "description": "Complete Postman API Collection for Little Learners Full-Stack MERN Academic Project (MITAOE Web Technology)",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "01. Health Check",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/api",
+          "host": ["{{baseUrl}}"],
+          "path": ["api"]
+        }
+      }
+    },
+    {
+      "name": "02. Auth - Register User",
+      "request": {
+        "method": "POST",
+        "header": [
+          { "key": "Content-Type", "value": "application/json" }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"name\": \"Riya Sharma\",\n  \"email\": \"riya.sharma@gmail.com\",\n  \"password\": \"RiyaLearns123\"\n}"
+        },
+        "url": {
+          "raw": "{{baseUrl}}/api/auth/register",
+          "host": ["{{baseUrl}}"],
+          "path": ["api", "auth", "register"]
+        }
+      }
+    },
+    {
+      "name": "03. Auth - Login User",
+      "request": {
+        "method": "POST",
+        "header": [
+          { "key": "Content-Type", "value": "application/json" }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"email\": \"aarav@gmail.com\",\n  \"password\": \"Aarav123\"\n}"
+        },
+        "url": {
+          "raw": "{{baseUrl}}/api/auth/login",
+          "host": ["{{baseUrl}}"],
+          "path": ["api", "auth", "login"]
+        }
+      }
+    },
+    {
+      "name": "04. Auth - Get Current User (/me)",
+      "request": {
+        "method": "GET",
+        "header": [
+          { "key": "Authorization", "value": "Bearer {{token}}" }
+        ],
+        "url": {
+          "raw": "{{baseUrl}}/api/auth/me",
+          "host": ["{{baseUrl}}"],
+          "path": ["api", "auth", "me"]
+        }
+      }
+    },
+    {
+      "name": "05. Users - Get Profile",
+      "request": {
+        "method": "GET",
+        "header": [
+          { "key": "Authorization", "value": "Bearer {{token}}" }
+        ],
+        "url": {
+          "raw": "{{baseUrl}}/api/users/profile",
+          "host": ["{{baseUrl}}"],
+          "path": ["api", "users", "profile"]
+        }
+      }
+    },
+    {
+      "name": "06. Users - Update Profile (PUT CRUD)",
+      "request": {
+        "method": "PUT",
+        "header": [
+          { "key": "Authorization", "value": "Bearer {{token}}" },
+          { "key": "Content-Type", "value": "application/json" }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"name\": \"Aarav Super Explorer\"\n}"
+        },
+        "url": {
+          "raw": "{{baseUrl}}/api/users/profile",
+          "host": ["{{baseUrl}}"],
+          "path": ["api", "users", "profile"]
+        }
+      }
+    },
+    {
+      "name": "07. Games - Get All Games",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/api/games",
+          "host": ["{{baseUrl}}"],
+          "path": ["api", "games"]
+        }
+      }
+    },
+    {
+      "name": "08. Games - Create Game (POST CRUD)",
+      "request": {
+        "method": "POST",
+        "header": [
+          { "key": "Content-Type", "value": "application/json" }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"title\": \"Shadow Puppets\",\n  \"category\": \"Creativity\",\n  \"description\": \"Match hand shadows to animal silhouettes!\",\n  \"emoji\": \"🔦\",\n  \"level\": \"Easy\",\n  \"route\": \"/shadow-game\"\n}"
+        },
+        "url": {
+          "raw": "{{baseUrl}}/api/games",
+          "host": ["{{baseUrl}}"],
+          "path": ["api", "games"]
+        }
+      }
+    },
+    {
+      "name": "09. Questions - Get Questions by Game",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/api/questions?gameTitle=Guess the Animal",
+          "host": ["{{baseUrl}}"],
+          "path": ["api", "questions"],
+          "query": [
+            { "key": "gameTitle", "value": "Guess the Animal" }
+          ]
+        }
+      }
+    },
+    {
+      "name": "10. Questions - Create Question (POST CRUD)",
+      "request": {
+        "method": "POST",
+        "header": [
+          { "key": "Content-Type", "value": "application/json" }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"gameTitle\": \"Guess the Animal\",\n  \"questionText\": \"Which animal has a spiral horn like a unicorn in the sea?\",\n  \"emoji\": \"🦄\",\n  \"options\": [\"Narwhal\", \"Seal\", \"Octopus\", \"Crab\"],\n  \"correctAnswer\": \"Narwhal\",\n  \"difficulty\": \"Easy\"\n}"
+        },
+        "url": {
+          "raw": "{{baseUrl}}/api/questions",
+          "host": ["{{baseUrl}}"],
+          "path": ["api", "questions"]
+        }
+      }
+    },
+    {
+      "name": "11. Game Records - Save Game Result (POST)",
+      "request": {
+        "method": "POST",
+        "header": [
+          { "key": "Authorization", "value": "Bearer {{token}}" },
+          { "key": "Content-Type", "value": "application/json" }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"gameTitle\": \"Learn Colours\",\n  \"score\": 8,\n  \"total\": 8,\n  \"starsEarned\": 8,\n  \"userEmail\": \"aarav@gmail.com\",\n  \"userName\": \"Aarav Sharma\"\n}"
+        },
+        "url": {
+          "raw": "{{baseUrl}}/api/gamerecords",
+          "host": ["{{baseUrl}}"],
+          "path": ["api", "gamerecords"]
+        }
+      }
+    },
+    {
+      "name": "12. Game Records - Get User Game History",
+      "request": {
+        "method": "GET",
+        "header": [
+          { "key": "Authorization", "value": "Bearer {{token}}" }
+        ],
+        "url": {
+          "raw": "{{baseUrl}}/api/gamerecords/my-history?email=aarav@gmail.com",
+          "host": ["{{baseUrl}}"],
+          "path": ["api", "gamerecords", "my-history"],
+          "query": [
+            { "key": "email", "value": "aarav@gmail.com" }
+          ]
+        }
+      }
+    },
+    {
+      "name": "13. Game Stats - Get All Game Statistics",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/api/gamestats",
+          "host": ["{{baseUrl}}"],
+          "path": ["api", "gamestats"]
+        }
+      }
+    },
+    {
+      "name": "14. Game Stats - Platform Overview",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/api/gamestats/overview",
+          "host": ["{{baseUrl}}"],
+          "path": ["api", "gamestats", "overview"]
+        }
+      }
+    },
+    {
+      "name": "15. Achievements - Get All Achievements",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/api/achievements",
+          "host": ["{{baseUrl}}"],
+          "path": ["api", "achievements"]
+        }
+      }
+    },
+    {
+      "name": "16. Achievements - Get User Earned Badges",
+      "request": {
+        "method": "GET",
+        "header": [
+          { "key": "Authorization", "value": "Bearer {{token}}" }
+        ],
+        "url": {
+          "raw": "{{baseUrl}}/api/achievements/my?email=aarav@gmail.com",
+          "host": ["{{baseUrl}}"],
+          "path": ["api", "achievements", "my"],
+          "query": [
+            { "key": "email", "value": "aarav@gmail.com" }
+          ]
+        }
+      }
+    },
+    {
+      "name": "17. Rankings - Get Leaderboard",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/api/rankings",
+          "host": ["{{baseUrl}}"],
+          "path": ["api", "rankings"]
+        }
+      }
+    },
+    {
+      "name": "18. Feedback - Submit Parent/Learner Feedback (POST CRUD)",
+      "request": {
+        "method": "POST",
+        "header": [
+          { "key": "Content-Type", "value": "application/json" }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"userName\": \"Sneha Kulkarni\",\n  \"userEmail\": \"sneha@gmail.com\",\n  \"rating\": 5,\n  \"gameTitle\": \"Learn Numbers\",\n  \"comment\": \"The 1 to 20 counting with voice pronunciation is so engaging for my 3-year-old!\"\n}"
+        },
+        "url": {
+          "raw": "{{baseUrl}}/api/feedback",
+          "host": ["{{baseUrl}}"],
+          "path": ["api", "feedback"]
+        }
+      }
+    },
+    {
+      "name": "19. Feedback - Get All Feedback (GET CRUD)",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/api/feedback",
+          "host": ["{{baseUrl}}"],
+          "path": ["api", "feedback"]
+        }
+      }
+    },
+    {
+      "name": "20. Notifications - Get User Notifications",
+      "request": {
+        "method": "GET",
+        "header": [
+          { "key": "Authorization", "value": "Bearer {{token}}" }
+        ],
+        "url": {
+          "raw": "{{baseUrl}}/api/notifications?email=aarav@gmail.com",
+          "host": ["{{baseUrl}}"],
+          "path": ["api", "notifications"],
+          "query": [
+            { "key": "email", "value": "aarav@gmail.com" }
+          ]
+        }
+      }
+    },
+    {
+      "name": "21. Daily Streaks - Get User Streak",
+      "request": {
+        "method": "GET",
+        "header": [
+          { "key": "Authorization", "value": "Bearer {{token}}" }
+        ],
+        "url": {
+          "raw": "{{baseUrl}}/api/streaks/my?email=aarav@gmail.com",
+          "host": ["{{baseUrl}}"],
+          "path": ["api", "streaks", "my"],
+          "query": [
+            { "key": "email", "value": "aarav@gmail.com" }
+          ]
+        }
+      }
+    }
+  ],
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "http://localhost:5000",
+      "type": "string"
+    },
+    {
+      "key": "token",
+      "value": "your_jwt_token_here",
+      "type": "string"
+    }
+  ]
+}

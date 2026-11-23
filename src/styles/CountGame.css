@@ -1,0 +1,329 @@
+
+.count-game-page {
+  min-height: 100vh;
+  background: #fff8ef;
+  color: #4d5968;
+  font-family: 'Trebuchet MS', Arial, sans-serif;
+}
+
+.count-header {
+  min-height: 75px;
+  padding: 15px 5%;
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.04);
+}
+
+.count-back {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  color: #8293a2;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.count-logo {
+  font-size: 20px;
+  font-weight: bold;
+  color: #e9a34a;
+}
+
+.count-stars {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  background: #fff5d9;
+  padding: 10px 15px;
+  border-radius: 25px;
+  color: #9b751e;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.count-container {
+  max-width: 750px;
+  margin: auto;
+  padding: 40px 20px;
+}
+
+.count-heading {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.count-label {
+  display: inline-block;
+  padding: 9px 17px;
+  border-radius: 25px;
+  background: #fff0d4;
+  color: #ad762a;
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.count-heading h1,
+.count-result h1 {
+  color: #b87c38;
+  font-size: 34px;
+  margin: 17px 0 10px;
+}
+
+.count-heading p,
+.count-result > p {
+  color: #94a0a9;
+  font-size: 15px;
+}
+
+.count-progress-text {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  color: #8796a2;
+  font-size: 13px;
+}
+
+.count-progress-track {
+  height: 10px;
+  background: #f0e3d3;
+  border-radius: 20px;
+  overflow: hidden;
+  margin-bottom: 28px;
+}
+
+.count-progress-fill {
+  height: 100%;
+  background: #f2b65e;
+  border-radius: 20px;
+  transition: width 0.3s;
+}
+
+.count-card {
+  padding: 35px;
+  background: white;
+  border-radius: 24px;
+  text-align: center;
+  box-shadow: 0 10px 35px rgba(130, 105, 65, 0.08);
+}
+
+.count-card h2 {
+  color: #536c7e;
+  font-size: 23px;
+}
+
+.count-instruction {
+  color: #9ba8b2;
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+.objects-area {
+  min-height: 190px;
+  padding: 25px;
+  margin: 25px 0;
+  border-radius: 18px;
+  background: #fff9eb;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 17px;
+}
+
+.count-object {
+  font-size: 55px;
+  animation: popIn 0.35s ease both;
+}
+
+@keyframes popIn {
+  from {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.count-card h3 {
+  color: #657e8d;
+  font-size: 16px;
+  margin-bottom: 18px;
+}
+
+.count-options {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+}
+
+.count-option {
+  height: 65px;
+  border: 2px solid #f0dfc9;
+  border-radius: 14px;
+  background: #fffaf3;
+  color: #b17a36;
+  font-size: 24px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.count-option:hover:not(:disabled) {
+  background: #fff0d4;
+  border-color: #eab45f;
+  transform: translateY(-3px);
+}
+
+.count-option:disabled {
+  cursor: default;
+}
+
+.count-option.count-correct {
+  background: #e5f8e9;
+  border-color: #55bd72;
+  color: #248543;
+}
+
+.count-option.count-wrong {
+  background: #fff0ee;
+  border-color: #e98b80;
+  color: #c45147;
+}
+
+.count-feedback {
+  margin-top: 20px;
+  padding: 14px;
+  border-radius: 12px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.right-feedback {
+  background: #e5f8e9;
+  color: #248543;
+}
+
+.wrong-feedback {
+  background: #fff4df;
+  color: #a87925;
+}
+
+.count-next {
+  width: 100%;
+  min-height: 52px;
+  margin-top: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 9px;
+  border: none;
+  border-radius: 12px;
+  background: #edae53;
+  color: white;
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.count-next:hover:not(:disabled) {
+  background: #d99537;
+  transform: translateY(-2px);
+}
+
+.count-next:disabled {
+  background: #e9d1ae;
+  cursor: not-allowed;
+}
+
+.count-result {
+  padding: 50px 35px;
+  background: white;
+  text-align: center;
+  border-radius: 24px;
+  box-shadow: 0 10px 35px rgba(130, 105, 65, 0.08);
+}
+
+.count-trophy {
+  font-size: 85px;
+  margin-bottom: 20px;
+}
+
+.count-final-score {
+  margin: 28px 0;
+  padding: 20px;
+  border-radius: 15px;
+  background: #fff6df;
+  color: #a47b1f;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.count-result h3 {
+  color: #71899c;
+}
+
+.count-home-link {
+  display: inline-block;
+  margin-top: 20px;
+  text-decoration: none;
+  color: #d99537;
+  font-weight: bold;
+}
+
+@media (max-width: 550px) {
+  .count-header {
+    padding: 14px;
+    gap: 7px;
+  }
+
+  .count-logo {
+    font-size: 15px;
+  }
+
+  .count-back {
+    font-size: 12px;
+  }
+
+  .count-stars {
+    padding: 8px;
+    font-size: 11px;
+  }
+
+  .count-container {
+    padding: 28px 14px;
+  }
+
+  .count-heading h1 {
+    font-size: 27px;
+  }
+
+  .count-card {
+    padding: 25px 16px;
+  }
+
+  .count-object {
+    font-size: 42px;
+  }
+
+  .objects-area {
+    gap: 12px;
+  }
+
+  .count-options {
+    gap: 9px;
+  }
+
+  .count-option {
+    height: 55px;
+  }
+
+  .count-result {
+    padding: 35px 18px;
+  }
+}

@@ -1,0 +1,15 @@
+import express from 'express';
+import {
+  getUserProfile,
+  updateUserProfile,
+  getUsers
+} from '../controllers/userController.js';
+import { protect } from '../middleware/auth.js';
+
+const router = express.Router();
+
+router.get('/profile', protect, getUserProfile);
+router.put('/profile', protect, updateUserProfile);
+router.get('/', getUsers);
+
+export default router;

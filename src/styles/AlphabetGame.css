@@ -1,0 +1,303 @@
+
+.alphabet-page {
+  min-height: 100vh;
+  background: #f5f1ff;
+  color: #4d5268;
+  font-family: 'Trebuchet MS', Arial, sans-serif;
+}
+
+.alphabet-header {
+  min-height: 75px;
+  padding: 15px 5%;
+  background: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.04);
+}
+
+.alphabet-back {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #8293a2;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.alphabet-logo {
+  color: #8c70ce;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.alphabet-stars {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  background: #fff5d9;
+  padding: 10px 15px;
+  border-radius: 25px;
+  color: #9b751e;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.alphabet-container {
+  max-width: 750px;
+  margin: auto;
+  padding: 40px 20px;
+}
+
+.alphabet-heading {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.alphabet-label {
+  display: inline-block;
+  padding: 9px 17px;
+  border-radius: 25px;
+  background: #eee7ff;
+  color: #8263c1;
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.alphabet-heading h1,
+.alphabet-result h1 {
+  color: #7557b6;
+  font-size: 34px;
+  margin: 17px 0 10px;
+}
+
+.alphabet-heading p,
+.alphabet-result > p {
+  color: #94a0a9;
+  font-size: 15px;
+}
+
+.alphabet-progress-text {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  color: #8796a2;
+  font-size: 13px;
+}
+
+.alphabet-progress-track {
+  height: 10px;
+  background: #e6ddf7;
+  border-radius: 20px;
+  overflow: hidden;
+  margin-bottom: 28px;
+}
+
+.alphabet-progress-fill {
+  height: 100%;
+  background: #a58ae5;
+  border-radius: 20px;
+  transition: width 0.3s;
+}
+
+.alphabet-card {
+  padding: 35px;
+  background: white;
+  border-radius: 24px;
+  text-align: center;
+  box-shadow: 0 10px 35px rgba(100, 75, 150, 0.08);
+}
+
+.alphabet-picture {
+  width: 165px;
+  height: 165px;
+  background: #f1ebff;
+  border-radius: 50%;
+  margin: 0 auto 20px;
+  display: grid;
+  place-items: center;
+  font-size: 90px;
+}
+
+.alphabet-card h2 {
+  color: #7557b6;
+  font-size: 25px;
+}
+
+.alphabet-question {
+  color: #94a0a9;
+  font-size: 14px;
+  margin: 12px 0 25px;
+}
+
+.alphabet-options {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+}
+
+.alphabet-option {
+  height: 65px;
+  border: 2px solid #e7def7;
+  border-radius: 14px;
+  background: #faf8ff;
+  color: #8263c1;
+  font-size: 26px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.alphabet-option:hover:not(:disabled) {
+  background: #eee7ff;
+  border-color: #a58ae5;
+  transform: translateY(-3px);
+}
+
+.alphabet-option:disabled {
+  cursor: default;
+}
+
+.alphabet-option.alphabet-correct {
+  background: #e5f8e9;
+  border-color: #55bd72;
+  color: #248543;
+}
+
+.alphabet-option.alphabet-wrong {
+  background: #fff0ee;
+  border-color: #e98b80;
+  color: #c45147;
+}
+
+.alphabet-feedback {
+  margin-top: 20px;
+  padding: 14px;
+  border-radius: 12px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.alphabet-right {
+  background: #e5f8e9;
+  color: #248543;
+}
+
+.alphabet-error {
+  background: #fff4df;
+  color: #a87925;
+}
+
+.alphabet-next {
+  width: 100%;
+  min-height: 52px;
+  margin-top: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 9px;
+  border: none;
+  border-radius: 12px;
+  background: #9475d5;
+  color: white;
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.alphabet-next:hover:not(:disabled) {
+  background: #7959bc;
+  transform: translateY(-2px);
+}
+
+.alphabet-next:disabled {
+  background: #d0c2eb;
+  cursor: not-allowed;
+}
+
+.alphabet-result {
+  padding: 50px 35px;
+  background: white;
+  text-align: center;
+  border-radius: 24px;
+  box-shadow: 0 10px 35px rgba(100, 75, 150, 0.08);
+}
+
+.alphabet-trophy {
+  font-size: 85px;
+  margin-bottom: 20px;
+}
+
+.alphabet-final-score {
+  margin: 28px 0;
+  padding: 20px;
+  border-radius: 15px;
+  background: #f2edff;
+  color: #8263c1;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.alphabet-result h3 {
+  color: #71899c;
+}
+
+.alphabet-home-link {
+  display: inline-block;
+  margin-top: 20px;
+  text-decoration: none;
+  color: #8263c1;
+  font-weight: bold;
+}
+
+@media (max-width: 550px) {
+  .alphabet-header {
+    padding: 14px;
+    gap: 7px;
+  }
+
+  .alphabet-logo {
+    font-size: 15px;
+  }
+
+  .alphabet-back {
+    font-size: 12px;
+  }
+
+  .alphabet-stars {
+    padding: 8px;
+    font-size: 11px;
+  }
+
+  .alphabet-container {
+    padding: 28px 14px;
+  }
+
+  .alphabet-heading h1 {
+    font-size: 27px;
+  }
+
+  .alphabet-card {
+    padding: 25px 16px;
+  }
+
+  .alphabet-picture {
+    width: 140px;
+    height: 140px;
+    font-size: 75px;
+  }
+
+  .alphabet-options {
+    gap: 9px;
+  }
+
+  .alphabet-option {
+    height: 55px;
+  }
+
+  .alphabet-result {
+    padding: 35px 18px;
+  }
+}
