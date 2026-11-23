@@ -1,4 +1,4 @@
-const API_BASE_URL = 'https://wt8.onrender.com/api';
+const API_BASE_URL = 'https://wt8-1.onrender.com/api';
 
 // Helper to get auth header
 const getAuthHeaders = () => {
